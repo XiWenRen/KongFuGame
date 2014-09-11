@@ -8,4 +8,5 @@ public class FightProcess {
 
 	private int attack;
 	private int defense;
+	private int dodge;
 }
