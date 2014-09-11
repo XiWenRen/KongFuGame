@@ -8,6 +8,7 @@ public class Move {
 	 * @param movetype 招式类型，攻击/防守/闪避
 	 * @param baseNum 基础数值，如果是攻击招式就是攻击力，防守招式就是防御力
 	 * @param weaponType 需要的武器类别
+	 * TODO 技能攻击的部位
 	 */
 	public Move(String name,int movetype, int baseNum, int weaponType) {
 		this.moveName = name;

@@ -16,6 +16,7 @@ import com.kongfu.roles.Role;
  * 防守者也可以躲避，躲避概率 = 本身的敏捷*招式威力
  * 判断招式是否攻击成功就是攻击力 是否大于 防御力
  * 判断是否躲避成功就是躲避总速度 是否大于 攻击速度
+ * TODO 下面几条还未完成
  * 如果防守成功，则下回合还是防守
  * 如果躲避成功，则下回合攻守方换位
  * 如果防守/躲避失败，则扣除体力和敏捷
@@ -124,7 +125,7 @@ public class FightProcess {
 			
 		}
 		Move dodgeMove = attacker.getDodgeMoveList().get(randomNum);
-		dodge = defenser.getAgility() * dodgeMove.getBaseNum();
+		dodge = defenser.getAgility() * dodgeMove.getMoveSpeed();
 		fightInfo = defenserName + info1 + dodgeMove.getMoveName() + (attack > defense ? (info7) : (info5 + attackerName + info4));
 		defenser.setPower(attack - dodge > 0 ? attack - dodge : defenser.getPower());
 	}
