@@ -24,6 +24,7 @@ public class Move {
 	private int moveType;//招式类型，攻击/防守/闪避
 	private int baseNum;//基础数值，如果是攻击招式就是攻击力，防守招式就是防御力
 	private int weaponType;//需要的武器类别
+	private int moveSpeed;//招式速度 只有攻击招式有用
 	
 	
 	public String getMoveName() {
@@ -38,17 +39,28 @@ public class Move {
 	public void setMoveType(int moveType) {
 		this.moveType = moveType;
 	}
-	public int getBasalNum() {
-		return baseNum;
-	}
-	public void setBasalNum(int basalNum) {
-		this.baseNum = basalNum;
-	}
 	public int getWeaponType() {
 		return weaponType;
 	}
 	public void setWeaponType(int weaponType) {
 		this.weaponType = weaponType;
 	}
+
+	public int getBaseNum() {
+		return baseNum;
+	}
+
+	public void setBaseNum(int baseNum) {
+		this.baseNum = baseNum;
+	}
+
+	public int getMoveSpeed() {
+		return moveSpeed;
+	}
+
+	public void setMoveSpeed(int moveSpeed) {
+		this.moveSpeed = moveSpeed;
+	}
+	
 
 }
