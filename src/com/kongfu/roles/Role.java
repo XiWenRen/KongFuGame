@@ -4,12 +4,20 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.kongfu.move.Move;
+import com.kongfu.utility.MoveUtility;
 import com.kongfu.weapon.Weapon;
 
 public class Role {
 
 	public Role() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Role(String name,int strength,int agility,int power){
+		this.roleName = name;
+		this.agility = agility;
+		this.strength = strength;
+		this.power = power;
 	}
 	
 	private String roleName;//角色名字
@@ -79,5 +87,20 @@ public class Role {
 		this.dodgeMoveList = dodgeMoveList;
 	}
 	
+	public void addMove(Move move){
+		switch(move.getMoveType()){
+			case MoveUtility.MOVE_TYPE_ATTACK:
+				attackMoveList.add(move);
+				break;
+			case MoveUtility.MOVE_TYPE_DEFESE:
+				defenseMoveList.add(move);
+				break;
+			case MoveUtility.MOVE_TYPE_DODGE:
+				dodgeMoveList.add(move);
+				break;
+			default:
+				break;
+		}
+	}
 	
 }
